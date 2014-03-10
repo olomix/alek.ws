@@ -37,7 +37,7 @@ SOCIAL = (
 DEFAULT_PAGINATION = 20
 
 # Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = False
+RELATIVE_URLS = True
 
 THEME = 'alek.ws.theme'
 ARTICLE_URL = '{category}/{date:%Y}/{date:%b}/{date:%d}/{slug}.html'
@@ -46,3 +46,6 @@ ARTICLE_SAVE_AS = ARTICLE_URL
 FOOTER_TEXT = "© 2014 Oleg Lomaka"
 
 # CSS_PYGMENTS = 'pygments-zenburn.css'
+
+GOOGLE_ANALYTICS_ID = 'UA-15768185-5'
+GOOGLE_ANALYTICS_CONF = 'none'
