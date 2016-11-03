@@ -17,6 +17,8 @@ SSH_PORT=22
 SSH_USER=alek
 SSH_TARGET_DIR=blog/
 
+GH_REPO_DIR=$(HOME)/Documents/src/olomix.github.io
+
 S3_BUCKET=my_s3_bucket
 
 CLOUDFILES_USERNAME=my_rackspace_username
@@ -104,5 +106,8 @@ cf_upload: publish
 github: publish
 	ghp-import $(OUTPUTDIR)
 	git push origin gh-pages
+
+rsync:
+	rsync --delete -r --cvs-exclude -v --exclude .git --exclude CNAME --exclude README.md $(OUTPUTDIR)/ $(GH_REPO_DIR)/
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github
