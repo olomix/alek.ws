@@ -17,7 +17,8 @@ SSH_PORT=22
 SSH_USER=alek
 SSH_TARGET_DIR=blog/
 
-GH_REPO_DIR=$(HOME)/Documents/src/olomix.github.io
+# GH_REPO_DIR=$(HOME)/Documents/src/olomix.github.io
+GH_REPO_DIR=$(HOME)/Documents/src/github.com/olomix/olomix.github.io
 
 S3_BUCKET=my_s3_bucket
 
